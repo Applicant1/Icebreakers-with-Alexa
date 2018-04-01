@@ -1,0 +1,3 @@
+(Key) - (Value)
+answer - 0
+theLieScore - 0
