@@ -1,0 +1,59 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ice breaker gm",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "reset",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "teach",
+                        "how",
+                        "instructions",
+                        "teach me",
+                        "teach us ",
+                        "how to play",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit",
+                        "terminate",
+                        "stop",
+                        "end"
+                    ]
+                },
+                {
+                    "name": "NetGam",
+                    "slots": [],
+                    "samples": [
+                        "go forward",
+                        "after",
+                        "forward",
+                        "next"
+                    ]
+                },
+                {
+                    "name": "PresGam",
+                    "slots": [],
+                    "samples": [
+                        "go back",
+                        "prev",
+                        "before",
+                        "back",
+                        "previous"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
