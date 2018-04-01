@@ -1,0 +1,219 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "scat time",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel",
+                        "reset "
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help",
+                        "teach",
+                        "instructions",
+                        "how"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop",
+                        "exit",
+                        "end",
+                        "terminate"
+                    ]
+                },
+                {
+                    "name": "saidNone",
+                    "slots": [
+                        {
+                            "name": "NONE",
+                            "type": "LIST_NONE"
+                        }
+                    ],
+                    "samples": [
+                        "{NONE}"
+                    ]
+                },
+                {
+                    "name": "saidAnimal",
+                    "slots": [
+                        {
+                            "name": "ANIMAL",
+                            "type": "LIST_ANIMAL"
+                        }
+                    ],
+                    "samples": [
+                        "Animal",
+                        "{ANIMAL}"
+                    ]
+                },
+                {
+                    "name": "saidHuman",
+                    "slots": [
+                        {
+                            "name": "HUMAN",
+                            "type": "LIST_HUMAN"
+                        }
+                    ],
+                    "samples": [
+                        "{HUMAN}"
+                    ]
+                },
+                {
+                    "name": "saidMachine",
+                    "slots": [
+                        {
+                            "name": "MACHINE",
+                            "type": "LIST_MACHINE"
+                        }
+                    ],
+                    "samples": [
+                        "tool",
+                        "{MACHINE}"
+                    ]
+                },
+                {
+                    "name": "nextQuestion",
+                    "slots": [],
+                    "samples": [
+                        "go",
+                        "go on",
+                        "continue",
+                        "let us go",
+                        "Let's go",
+                        "next question",
+                        "next"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_NONE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "No"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Not included"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Other"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Neither"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "None of the above"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_ANIMAL",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Critter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Creature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Animal"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_HUMAN",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Humans"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Peoople"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Person"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Human"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_MACHINE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Metal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Utilities"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Manmade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Manmade Tools"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Manmade things"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tools"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Machines"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
