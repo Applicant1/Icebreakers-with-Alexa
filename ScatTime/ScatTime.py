@@ -56,7 +56,7 @@ def on_launch(launch_request, session):
 
 def get_welcome_response():
     session_attributes = {}
-speech_output = "Hello humans! Let's play Scat Time! " \
+    speech_output = "Hello humans! Let's play Scat Time! " \
                     "I will play a sound" \
                     " produced by either an animal, human, tool, or some other category of source. " \
                     "Whoever figures out the source must shout it out. " \
@@ -163,7 +163,7 @@ def right():
     return playSound(getWinner(randint(0,4))+" Your team earned a point!")
     
 def wrong():
-    return playSound( getLower(randint(0,4))+" Your team lost two points...")
+    return playSound( getLoser(randint(0,4))+" Your team lost two points...")
     
 def noOneKnows():
     return nextGuess()
