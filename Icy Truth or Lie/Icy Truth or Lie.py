@@ -188,6 +188,7 @@ def get_welcome_response():
     while(statements[0] == statements[1]):
         statements[1] = TRUTHS[random.randint(0, 7)]
     theLie = statements[2]
+    os.environ['answerString']=theLie
     random.shuffle(statements)
     if(statements[0]==theLie):
         os.environ['answer'] = "0"
@@ -215,11 +216,11 @@ def determine_score_1():
     else:
         i = os.environ['theLieScore']
         os.environ['theLieScore'] = str(int(i)-1)
-        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ theLie+ ": "+ statements[theLie]+ ". " \
+        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ os.environ['answer']+ ": "+ os.environ['answerString']+ ". " \
         "Your score is now "+ os.environ['theLieScore']+ ". Tell me to continue if you would like to play again."
-    should_end_session = False
+
     return build_response({}, build_speechlet_response(
-        "score", speech_output, speech_output, should_end_session))
+        "score", speech_output, speech_output, False))
         
 
 def determine_score_2():
@@ -231,17 +232,16 @@ def determine_score_2():
     else:
         i = os.environ['theLieScore']
         os.environ['theLieScore'] = str(int(i)-1)
-        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ theLie+ ": "+ statements[theLie]+ ". " \
+        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ os.environ['answer']+ ": "+ os.environ['answerString']+ ". " \
         "Your score is now "+ os.environ['theLieScore']+ ". Tell me to continue if you would like to play again."
+    
     should_end_session = False
     return build_response({}, build_speechlet_response(
         "score", speech_output, speech_output, should_end_session))
         
     
 def determine_score_3():
-    return build_response({}, build_speechlet_response(
-        "score", "where error", "", False))
-    if os.environ['answer'] == 2:
+    if os.environ['answer'] == "2":
         i = os.environ['theLieScore']
         os.environ['theLieScore'] = str(int(i)+1)
         speech_output = "Congratulations! You determined the lie. " \
@@ -249,7 +249,7 @@ def determine_score_3():
     else:
         i = os.environ['theLieScore']
         os.environ['theLieScore'] = str(int(i)-1)
-        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ theLie+ ": "+ statements[theLie]+ ". " \
+        speech_output = "Sorry, you guessed wrong. The lie was Statement "+ os.environ['answer']+ ": "+ os.environ['answerString']+ ". " \
         "Your score is now "+ os.environ['theLieScore']+ ". Tell me to continue if you would like to play again."
     should_end_session = False
     return build_response({}, build_speechlet_response(
@@ -317,5 +317,3 @@ def handle_session_end_request():
 #     # understood, the session will end.
 #     return build_response(session_attributes, build_speechlet_response(
 #         intent['name'], speech_output, reprompt_text, should_end_session))
-
-
